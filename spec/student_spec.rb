@@ -44,7 +44,7 @@ describe 'School' do
       expect(@school.grade(10)).to eq(["Avi Flombaum", "Jeff Baird"])
     end
   end
-
+  #
   describe "#sort" do
     it 'is able to sort the students' do
       @school.add_student("Homer Simpson", 9)
