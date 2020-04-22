@@ -18,12 +18,13 @@ class School
   end
 
   def add_student(name, grade)
-    if @roster.key?(grade) #checks if the key for that grade already exists in the roster hash
-      @roster[grade] << name
-    else
-      @roster[grade] = []
-      @roster[grade] << name
-    end
+    # if @roster.key?(grade) #checks if the key for that grade already exists in the roster hash
+    #   @roster[grade] << name
+    # else
+    #   @roster[grade] = []
+    #   @roster[grade] << name
+    # end
+    (@roster.key?(grade)) ? (@roster[grade] << name) : (@roster[grade] = [name])
   end
 
   def grade(grade)
